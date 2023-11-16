@@ -5,13 +5,13 @@ pipeline {
         timeout(time: 10, unit: 'MINUTES')
      }
     environment {
-    DOCKERHUB_CREDENTIALS = credentials('karo-dockerhub')
+    DOCKERHUB_CREDENTIALS = credentials('oriakle-dockerhub')
     APP_NAME = "ooghenekaro/nodejs-app"
     }
     stages { 
         stage('SCM Checkout') {
             steps{
-           git branch: 'main', url: 'https://github.com/ooghenekaro/Simple-Nodejs-Docker-application.git'
+           git branch: 'main', url: 'https://github.com/oriakle/Simple-Nodejs-Docker-application.git'
             }
         }
 
